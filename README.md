@@ -1,21 +1,53 @@
 # vue-cli-2
 
-> A Vue.js project
+> vue-cli@2.9.x 为基础，升级webpack到4.16.x，vue到2.5.17，并且使用stylus和pug
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-npm install
+yarn
 
 # serve with hot reload at localhost:8080
-npm run dev
+yarn dev
 
 # build for production with minification
-npm run build
+yarn build
 
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### 目录结构
+```bash
+build # webpack相关配置
+config # webpack部分配置项
+src # 源代码
+  ├─ api # 请求api
+  │    └─ index.js # axios相关配置
+  ├─ assets # 相关资源
+  │    ├─ images # 资源图片
+  │    └─ styles # 样式
+  ├─ components # 自定义组件
+  ├─ router # 路由
+  │    └─ index.js # 路由相关配置
+  ├─ store # vuex仓库
+  │    └─ index.js # 基础状态、整合
+  ├─ layouts # 布局
+  │    └─ app.vue
+  ├─ pages # 相关页面
+  │    └─ app.vue
+  └─ main.js # 入口文件
+static #静态资源
+.babelrc # babel配置
+.editorconfig # 编辑器配置
+.eslintignore # 校验忽略
+.eslintrc.js # 校验配置
+.gitattributes # git属性
+.gitignore # git提交忽略
+.postcssrc.js # postcss配置
+README.md
+index.html # 默认html模版
+package.json
+yarn.lock
+```
