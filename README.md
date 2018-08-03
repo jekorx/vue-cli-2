@@ -17,8 +17,12 @@ yarn build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+## Tech Stack
+```
 
-### 目录结构
+```
+
+## Directory Structure
 ```bash
 ├─ build # webpack相关配置
 │  config # webpack部分配置项
