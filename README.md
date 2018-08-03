@@ -20,34 +20,34 @@ npm run build --report
 
 ### 目录结构
 ```bash
-build # webpack相关配置
-config # webpack部分配置项
-src # 源代码
-  ├─ api # 请求api
-  │    └─ index.js # axios相关配置
-  ├─ assets # 相关资源
-  │    ├─ images # 资源图片
-  │    └─ styles # 样式
-  ├─ components # 自定义组件
-  ├─ router # 路由
-  │    └─ index.js # 路由相关配置
-  ├─ store # vuex仓库
-  │    └─ index.js # 基础状态、整合
-  ├─ layouts # 布局
-  │    └─ app.vue
-  ├─ pages # 相关页面
-  │    └─ app.vue
-  └─ main.js # 入口文件
-static #静态资源
-.babelrc # babel配置
-.editorconfig # 编辑器配置
-.eslintignore # 校验忽略
-.eslintrc.js # 校验配置
-.gitattributes # git属性
-.gitignore # git提交忽略
-.postcssrc.js # postcss配置
-README.md
-index.html # 默认html模版
-package.json
-yarn.lock
+├─ build # webpack相关配置
+│  config # webpack部分配置项
+│  src # 源代码
+│    ├─ api # 请求api
+│    │    └─ index.js # axios相关配置
+│    ├─ assets # 相关资源
+│    │    ├─ images # 资源图片
+│    │    └─ styles # 样式
+│    ├─ components # 自定义组件
+│    ├─ router # 路由
+│    │    └─ index.js # 路由相关配置
+│    ├─ store # vuex仓库
+│    │    └─ index.js # 基础状态、整合
+│    ├─ layouts # 布局
+│    │    └─ app.vue
+│    ├─ pages # 相关页面
+│    │    └─ app.vue
+│    └─ main.js # 入口文件
+├─ static #静态资源
+├─ .babelrc # babel配置
+├─ .editorconfig # 编辑器配置
+├─ .eslintignore # 校验忽略
+├─ .eslintrc.js # 校验配置
+├─ .gitattributes # git属性
+├─ .gitignore # git提交忽略
+├─ .postcssrc.js # postcss配置
+├─ README.md
+├─ index.html # 默认html模版
+├─ package.json
+└─ yarn.lock
 ```
