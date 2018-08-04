@@ -11,7 +11,7 @@
 *.html  text eol=lf
 *.js    text eol=lf
 *.vue   text eol=lf
-*.styl   text eol=lf
+*.styl  text eol=lf
 *.lock  text eol=lf
 *.json  text eol=lf
 *.md    text eol=lf
