@@ -1,25 +1,30 @@
 # vue-cli-2
-
 > vue-cli@2.9.x 为基础，升级webpack到4.16.x，vue到2.5.17，并且使用stylus和pug
 
 ## Build Setup
-
 ``` bash
 # install dependencies
 yarn
-
-# serve with hot reload at localhost:8080
+# serve with hot reload at localhost:9510
 yarn dev
-
 # build for production with minification
 yarn build
-
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
-## Tech Stack
-```
 
+## Tech Stack
+```bash
+# 基于Promise的HTTP客户端，用于浏览器和node.js
+# https://github.com/axios/axios
+axios
+# 查询字符串解析和字符串化库，增加了一些安全性
+# https://github.com/ljharb/qs
+qs
+# https://cn.vuejs.org
+vue
+# https://router.vuejs.org/zh
+vue-router
 ```
 
 ## Directory Structure
