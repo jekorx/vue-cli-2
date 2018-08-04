@@ -14,32 +14,13 @@ npm run build --report
 ```
 
 ## Tech Stack
-1.[axios](https://github.com/axios/axios)，基于Promise的HTTP客户端，用于浏览器和node.js  
-2.[qs](https://github.com/ljharb/qs)，查询字符串解析和字符串化库，增加了一些安全性  
-3.[vue](https://cn.vuejs.org)  
-4.[vue-router](https://router.vuejs.org/zh)  
+1.[axios](https://github.com/axios/axios)，基于Promise的HTTP客户端，用于浏览器和node.js
+2.[qs](https://github.com/ljharb/qs)，查询字符串解析和字符串化库，增加了一些安全性
+3.[vue](https://cn.vuejs.org)
+4.[vue-router](https://router.vuejs.org/zh)
 
 ## Directory Structure
 ```bash
-├─ build # webpack相关配置
-│  config # webpack部分配置项
-│  src # 源代码
-│    ├─ api # 请求api
-│    │    └─ index.js # axios相关配置
-│    ├─ assets # 相关资源
-│    │    ├─ images # 资源图片
-│    │    └─ styles # 样式
-│    ├─ components # 自定义组件
-│    ├─ router # 路由
-│    │    └─ index.js # 路由相关配置
-│    ├─ store # vuex仓库
-│    │    └─ index.js # 基础状态、整合
-│    ├─ layouts # 布局
-│    │    └─ app.vue
-│    ├─ pages # 相关页面
-│    │    └─ app.vue
-│    └─ main.js # 入口文件
-├─ static #静态资源
 ├─ .babelrc # babel配置
 ├─ .editorconfig # 编辑器配置
 ├─ .eslintignore # 校验忽略
@@ -50,5 +31,24 @@ npm run build --report
 ├─ README.md
 ├─ index.html # 默认html模版
 ├─ package.json
-└─ yarn.lock
+├─ yarn.lock
+├─ static #静态资源
+├─ build # webpack相关配置
+├─ config # webpack部分配置项
+└─ src # 源代码
+     ├─ api # 请求api
+     │    └─ index.js # axios相关配置
+     ├─ assets # 相关资源
+     │    ├─ images # 资源图片
+     │    └─ styles # 样式
+     ├─ components # 自定义组件
+     ├─ router # 路由
+     │    └─ index.js # 路由相关配置
+     ├─ store # vuex仓库
+     │    └─ index.js # 基础状态、整合
+     ├─ layouts # 布局
+     │    └─ index.vue
+     ├─ pages # 相关页面
+     │    └─ index.vue
+     └─ main.js # 入口文件
 ```
