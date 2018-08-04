@@ -14,10 +14,10 @@ npm run build --report
 ```
 
 ## Tech Stack
-1.[axios](https://github.com/axios/axios)，基于Promise的HTTP客户端，用于浏览器和node.js
-2.[qs](https://github.com/ljharb/qs)，查询字符串解析和字符串化库，增加了一些安全性
-3.[vue](https://cn.vuejs.org)
-4.[vue-router](https://router.vuejs.org/zh)
+1.[axios](https://github.com/axios/axios)，基于Promise的HTTP客户端，用于浏览器和node.js  
+2.[qs](https://github.com/ljharb/qs)，查询字符串解析和字符串化库，增加了一些安全性  
+3.[vue](https://cn.vuejs.org)  
+4.[vue-router](https://router.vuejs.org/zh)  
 
 ## Directory Structure
 ```bash
