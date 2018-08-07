@@ -3,6 +3,7 @@
     input(type="file" multiple @change="change")
     button(@click="login") login
     button(@click="add") add
+    button(@click="get") get
 </template>
 <script>
 /*
@@ -10,7 +11,7 @@
 axios.defaults.baseURL = '/web/'
 // config/index.js
 '/web': {
-  target: 'http://localhost:8080',
+  target: 'http://localhost:8008',
   changeOrigin: true
 }
  */
@@ -28,6 +29,22 @@ export default {
         name: '11',
         age: 22
       }).then(res => console.log(res))
+    },
+    async get () {
+      try {
+        let list1 = await this.list1()
+        let list2 = await this.list2()
+        console.log(list2.data.size, list1.data.size)
+      } catch (error) {
+        console.log(error)
+      }
+    },
+    list1 () {
+      // return Promise.reject(new Error('Just an error!'))
+      return this.$http.get('app/v1/person/1/5')
+    },
+    list2 () {
+      return this.$http.get('app/v1/person/2/10')
     },
     change (e) {
       let files = e.target.files

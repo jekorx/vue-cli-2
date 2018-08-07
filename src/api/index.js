@@ -16,7 +16,6 @@ axios.defaults.transformRequest = [params => qs.stringify(params)]
 
 // 添加请求拦截器
 axios.interceptors.request.use(config => {
-  console.log(config)
   return config
 }, error => {
   // 请求错误
