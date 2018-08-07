@@ -1,5 +1,6 @@
 <template lang="pug">
   div
+    h3 title
     input(type="file" multiple @change="change")
     button(@click="login") login
     button(@click="add") add

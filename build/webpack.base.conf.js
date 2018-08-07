@@ -1,9 +1,16 @@
 'use strict'
 const path = require('path')
+const webpack = require('webpack')
+const HappyPack = require('happypack')
+const os = require('os')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
 const { VueLoaderPlugin } = require('vue-loader')
+
+const happyThreedPool = HappyPack.ThreadPool({
+  size: os.cpus().length
+})
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -57,11 +64,13 @@ module.exports = {
       },
       {
         test: /\.pug$/,
-        loader: 'pug-plain-loader'
+        // loader: 'pug-plain-loader'
+        loader: 'happypack/loader?id=happy-pug'
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        // loader: 'babel-loader',
+        loader: 'happypack/loader?id=happy-js',
         include: [resolve('src'), resolve('test'), resolve('node_modules/webpack-dev-server/client')]
       },
       {
@@ -91,7 +100,20 @@ module.exports = {
     ]
   },
   plugins: [
-    new VueLoaderPlugin()
+    new VueLoaderPlugin(),
+    new webpack.DllReferencePlugin({
+      manifest: require('../static/libs/vendors_mainfest.json')
+    }),
+    new HappyPack({
+      id: 'happy-pug',
+      loaders: ['pug-plain-loader'],
+      threadPool: happyThreedPool
+    }),
+    new HappyPack({
+      id: 'happy-js',
+      loaders: ['babel-loader'],
+      threadPool: happyThreedPool
+    })
   ],
   node: {
     // prevent webpack from injecting useless setImmediate polyfill because Vue
