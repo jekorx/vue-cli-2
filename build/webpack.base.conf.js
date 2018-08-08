@@ -1,6 +1,5 @@
 'use strict'
 const path = require('path')
-const webpack = require('webpack')
 const HappyPack = require('happypack')
 const os = require('os')
 const utils = require('./utils')
@@ -100,10 +99,8 @@ module.exports = {
     ]
   },
   plugins: [
+    // vue-loader 15.x 必须引用VueLoaderPlugin
     new VueLoaderPlugin(),
-    new webpack.DllReferencePlugin({
-      manifest: require('../static/libs/vendors_mainfest.json')
-    }),
     new HappyPack({
       id: 'happy-pug',
       loaders: ['pug-plain-loader'],
