@@ -1,7 +1,7 @@
 {
   "name": "vue-cli-2",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "vue-cli@2.9.x upgrade webpack@4.16.x and vue@2.5.17 with stylus and pug",
   "author": "jekorx",
   "private": true,
   "scripts": {

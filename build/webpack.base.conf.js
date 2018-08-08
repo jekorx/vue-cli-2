@@ -101,11 +101,13 @@ module.exports = {
   plugins: [
     // vue-loader 15.x 必须引用VueLoaderPlugin
     new VueLoaderPlugin(),
+    // happypack多线程打包
     new HappyPack({
       id: 'happy-pug',
       loaders: ['pug-plain-loader'],
       threadPool: happyThreedPool
     }),
+    // happypack多线程打包
     new HappyPack({
       id: 'happy-js',
       loaders: ['babel-loader'],
